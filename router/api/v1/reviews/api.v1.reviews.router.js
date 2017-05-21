@@ -23,6 +23,8 @@ reviewsRouter.post("/", (req, res) => {
             return;
         }
 
+        console.log('review saved',reviewSaved);
+
         //save movie reviews
         Movie.findById(reviewSaved.movie,(err, movieDb)=>{
             movieDb.reviews.push(reviewSaved._id);
