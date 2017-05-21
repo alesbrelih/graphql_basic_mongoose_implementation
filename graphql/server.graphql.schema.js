@@ -4,6 +4,10 @@ const {GraphQLSchema} = require("graphql");
 
 const QueryType = require("./query/graphql.query");
 
+const MutationType = require("./mutation/graphql.mutation");
+
+
 module.exports = new GraphQLSchema({
-    query: QueryType
+    query: QueryType,
+    mutation: MutationType
 });

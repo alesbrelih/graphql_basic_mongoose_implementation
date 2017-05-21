@@ -1,8 +1,13 @@
 const {GraphQLObjectType} = require("graphql");
 
-module.exports = new GraphQLObjectType({
+const {AddActor} = require("./actor/actor.mutations");
+
+const MutationType = new GraphQLObjectType({
     name: 'Mutations',
     fields: ()=>({
-        addActor : {}
+        addActor : AddActor
     })
 });
+
+
+module.exports = MutationType;
